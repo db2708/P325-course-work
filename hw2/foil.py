@@ -9,3 +9,4 @@ eq1_pow = (a + b)**2
 eq2_pow = (a - b)**2
 print(f'First equation: {eq1_sum}, {eq1_pow}')
 print(f'Second equation: {eq2_sum}, {eq2_pow}')
+

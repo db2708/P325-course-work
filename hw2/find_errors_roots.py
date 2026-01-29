@@ -6,3 +6,4 @@ q_sr = sqrt(q)
 x1 = (-b + q_sr)/(2*a)
 x2 = (-b - q_sr)/(2*a)
 print(x1, x2)
+
