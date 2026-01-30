@@ -1,3 +1,5 @@
+# program to convert N seconds to years (in this case, 1billion seconds)
+
 min = 60 # sec
 hour = 60 # min
 day = 24 # hour

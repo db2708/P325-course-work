@@ -1,3 +1,4 @@
+# corrected version of code that verifies the foil method and prints the computed values
 a = 3.3 
 a_sq = a**2
 b = 5.3

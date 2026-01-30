@@ -1,3 +1,5 @@
+# corrected version of code that calculates the height of an object under constant acceleration
+
 v0 = 3 # m/s
 t = 1 # s
 a = 2 # m/s**2
