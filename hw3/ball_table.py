@@ -13,8 +13,6 @@ h = (b - a) / n
 
 # list of t values to plug into y(t)
 t = [a + i*h for i in range(n + 1)]
-for i in range(n + 1):
-    t.append(a + i*h)
 
 for time in t:
     y = v_0 * time - 0.5 * g * time**2
