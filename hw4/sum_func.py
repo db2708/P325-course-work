@@ -5,7 +5,7 @@ def sum_1k(M):
     for k in range(1, M+1):
         tot += 1/k
 
-    print(tot)
+    return tot
 
 
 

@@ -6,6 +6,6 @@ def poly(x, roots):
     polynomial = 1
     for r_i in roots:
         polynomial *= x - r_i 
-    print(polynomial)
+    return polynomial
 
 
