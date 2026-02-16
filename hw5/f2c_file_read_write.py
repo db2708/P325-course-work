@@ -25,4 +25,3 @@ def f2c(lines):
 
     return Cdeg_path.write_text(contents)
 
-f2c(lines)
