@@ -66,6 +66,6 @@ def adaptive_trapezint(func, a, b, eps=1e-5):
     h = sqrt(12*eps) * ((b-a)*max_dub_deriv)**(-1/2)
     n = (b-a)/h
 
-    return print(trapezint(func, a, b, int(n)))
+    return trapezint(func, a, b, int(n))
 
 adaptive_trapezint(sin, 0, pi)
