@@ -1,6 +1,5 @@
 from pathlib import Path
 import json
-import numpy as np
 
 def clean_data(filename):
     
@@ -28,6 +27,6 @@ def clean_data(filename):
                     continue
 
     avg = tot/len
-    return print(avg)
+    return avg
 
 clean_data('tele_data.json')

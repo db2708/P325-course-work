@@ -15,7 +15,7 @@ def pressure(n, temperature, volume, units):
 
     """
 
-    R = {'J/(mol*K)' : 8.31446, 'L*atm/(mol*K)' : 0.082057, 'L*bar/(mol*K)' : 0.0831446}
+    R = {'J/(mol*K)' : 8.314, 'L*atm/(mol*K)' : 0.0821, 'L*bar/(mol*K)' : 0.08315}
 
     if units not in R.keys():
         print(-1)
