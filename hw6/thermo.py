@@ -26,9 +26,10 @@ def pressure(n, temperature, volume, units):
 
 
     try:
-        type(n) 
-        type(temperature) == int or type(temperature) == float
-        type(volume) == int or type(volume) == float
+        # checks if n, temperature, and volume are integers or floats by attempting a calculation with them.
+        # if any of the variables arent numbers a type error will be raised.
+        pressure = (n * R * temperature) / volume
+    
     except TypeError: 
             print("One or more of your entered variables for n, temperature, or volume is not a number. " 
             "Please enter a valid number for each variable.")
