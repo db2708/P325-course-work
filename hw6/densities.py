@@ -14,9 +14,10 @@ def read_densities(filename):
     densities = {}
 
     for line in lines:
+        # parts separates the line into two parts: the material's name and its density
         parts = line.rsplit(' ', 1)
         
-        name = parts[0]
+        name = parts[0].strip()
         density = float(parts[1])
         densities[name] = density
 
