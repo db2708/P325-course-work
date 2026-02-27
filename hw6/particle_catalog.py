@@ -15,9 +15,9 @@ while True:
     if name.lower() == 'q':
         break
     
-    mass = str(float(input("Enter the mass of the particle as a float. \n")))
-    charge = input("Enter the charge of the particle in units of e as an int.\n")
-    spin = input("Enter the spin of the particle as a float.\n")
+    mass = float(input("Enter the mass of the particle as a float. \n"))
+    charge = int(input("Enter the charge of the particle in units of e as an int.\n"))
+    spin = float(input("Enter the spin of the particle as a float.\n"))
 
     particles[name] = {'mass': mass, 'charge': charge, 'spin': spin}
 
