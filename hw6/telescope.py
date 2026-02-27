@@ -28,5 +28,3 @@ def clean_data(filename):
 
     avg = tot/len
     return avg
-
-clean_data('tele_data.json')

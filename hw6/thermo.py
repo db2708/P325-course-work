@@ -15,26 +15,32 @@ def pressure(n, temperature, volume, units):
 
     """
 
-    R = {'J/(mol*K)' : 8.314, 'L*atm/(mol*K)' : 0.0821, 'L*bar/(mol*K)' : 0.08315}
+    R = {'J/(mol*K)' : 8.314, 'L*atm/(mol*K)' : 0.0820574587, 'L*bar/(mol*K)' : 0.08314}
 
-    if units not in R.keys():
-        print(-1)
-        raise KeyError("Unit not recognized. Please enter one of the following exactly it appears: " 
-        "'J/(mol*K)', 'L*atm/(mol*K)', or 'L*bar/(mol*K)'")
-    else:
+    try:
         R = R[units]
+    except KeyError:
+        print("Unit not recognized. Please enter one of the following exactly it appears: " 
+        "'J/(mol*K)', 'L*atm/(mol*K)', or 'L*bar/(mol*K)'")
+        return -1
 
-    if type(n) not in [int, float] or type(temperature) not in [int, float] or type(volume) not in [int, float]:    
-            print(-1)
-            raise TypeError("One or more of your entered variables for n, temperature, or volume is not a number. " 
+
+    try:
+        type(n) 
+        type(temperature) == int or type(temperature) == float
+        type(volume) == int or type(volume) == float
+    except TypeError: 
+            print("One or more of your entered variables for n, temperature, or volume is not a number. " 
             "Please enter a valid number for each variable.")
+            return -1
+    try:
+        pressure = (n * R * temperature) / volume
+        return pressure
+    except ZeroDivisionError:
+        print("Volume entered cannot be zero. Please enter a non-zero value.")
+        return -1
     
-    if volume == 0:
-        print(-1)
-        raise ZeroDivisionError("Volume entered cannot be zero. Please enter a non-zero value.")
     
-    pressure = (n * R * temperature) / volume
     
-    return pressure
 
-
+pressure(1,300,1,'L*atm/(mol*K)')

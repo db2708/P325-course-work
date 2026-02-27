@@ -6,7 +6,7 @@ import json
 
 save_path = Path("particles.json")
 
-particles = []
+particles = {}
 
 while True:
         
@@ -19,7 +19,7 @@ while True:
     charge = input("Enter the charge of the particle in units of e as an int.\n")
     spin = input("Enter the spin of the particle as a float.\n")
 
-    particles.append({name: {'mass': mass, 'charge': charge, 'spin': spin}})
+    particles[name] = {'mass': mass, 'charge': charge, 'spin': spin}
 
 
     contents = json.dumps(particles, indent = 4)
