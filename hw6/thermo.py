@@ -24,24 +24,16 @@ def pressure(n, temperature, volume, units):
         "'J/(mol*K)', 'L*atm/(mol*K)', or 'L*bar/(mol*K)'")
         return -1
 
-
-    try:
-        # checks if n, temperature, and volume are integers or floats by attempting a calculation with them.
-        # if any of the variables arent numbers a type error will be raised.
-        pressure = (n * R * temperature) / volume
-    
-    except TypeError: 
-            print("One or more of your entered variables for n, temperature, or volume is not a number. " 
-            "Please enter a valid number for each variable.")
-            return -1
     try:
         pressure = (n * R * temperature) / volume
         return pressure
     except ZeroDivisionError:
         print("Volume entered cannot be zero. Please enter a non-zero value.")
         return -1
+    except TypeError: 
+        print("One or more of your entered variables for n, temperature, or volume is not a number. " 
+        "Please enter a valid number for each variable.")
+        return -1
     
     
     
-
-pressure(1,300,1,'L*atm/(mol*K)')

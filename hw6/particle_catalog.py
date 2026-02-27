@@ -15,7 +15,7 @@ while True:
     if name.lower() == 'q':
         break
     
-    mass = input("Enter the mass of the particle as a float. \n")
+    mass = str(float(input("Enter the mass of the particle as a float. \n")))
     charge = input("Enter the charge of the particle in units of e as an int.\n")
     spin = input("Enter the spin of the particle as a float.\n")
 
@@ -24,4 +24,3 @@ while True:
 
     contents = json.dumps(particles, indent = 4)
     save_path.write_text(contents)
-
