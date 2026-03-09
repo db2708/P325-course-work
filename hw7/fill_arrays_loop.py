@@ -11,10 +11,12 @@ def gauss_points():
     hvals: list of the corresponding h values for each x value.
     
     """
-    
-    step_size = (-4 -4)/40
+
+    step_size = abs((-4 -4)/40)
 
     xvals = [-4 + i*step_size for i in range(41)]
     hvals = [1/sqrt(2*pi)*e**(-1/2*x**2) for x in xvals]
-    return xvals, hvals
+    return (xvals, hvals)
+
+
 

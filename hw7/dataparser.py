@@ -26,7 +26,7 @@ def read_data(filename):
         return None, None
     else:
         for line in contents:
-            key, val = line.split(' ')
+            key, val = line.split()
 
             # checks the lower case values for null and nan incase capitalization varies in the file
             if val.lower() == 'null' or val.lower() == 'nan':
@@ -45,6 +45,7 @@ def read_data(filename):
             sigma_sum += (temp[i] - mu)**2
             sigma = sqrt(sigma_sum/N)
         
-        return mu, sigma
+        return (mu, sigma)
+    
 
 
