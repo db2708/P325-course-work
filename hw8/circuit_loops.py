@@ -23,6 +23,6 @@ def solve_circuit(v1, v2, r1, r2, r3):
     # calculates the currents by taking the inverse of R_mx and multiplying it by V_mx
     I_mx = np.linalg.inv(R_mx) @ V_mx
 
-    return print(I_mx)
+    return I_mx
 
-solve_circuit(9, 1.5, 100, 220, 330)
+# solve_circuit(9, 1.5, 100, 220, 330)
