@@ -17,10 +17,10 @@ def play_the_game(r, n_games):
         rolls = np.random.randint(1, 7, 4)
         tot = sum(rolls)
 
-    if tot > 9:
-        profit += r
-    elif tot <=9:
-        profit -= 1
+        if tot < 9:
+            profit += r
+        else:
+            profit -= 1
     
     return profit
 

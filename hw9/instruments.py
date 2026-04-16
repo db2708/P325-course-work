@@ -14,8 +14,7 @@ class Instrument:
 
     def __init__(self, name):
         self.name = str(name)
-        self.is_on = bool(is_on)
-        is_on = False
+        self.is_on = False
 
     def power_switch(self):
         self.is_on = True
@@ -38,15 +37,16 @@ class Thermometer(Instrument):
     """
 
     def __init__(self, name, unit):
-        self.unit = str(unit)
-
-        def take_reading(value):
-            if self.is_on == True:
-                print(f"Reading: {value} {self.unit}")
-                return True
-            elif self.is_on == False:
-                print("Error: Thermometer is off.")
-                return False
+        self.unit = unit
+        self.name = name
+        
+    def take_reading(self, value):
+        if self.is_on == True:
+            print(f"Reading: {value} {self.unit}")
+            return True
+        elif self.is_on == False:
+            print("Error: Thermometer is off.")
+            return False
 
 class Spectrometer(Instrument):
 
