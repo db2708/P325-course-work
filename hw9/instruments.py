@@ -36,9 +36,9 @@ class Thermometer(Instrument):
     
     """
 
-    def __init__(self, name, unit = 'Celcius'):
+    def __init__(self, name, unit='Celcius'):
+        super().__init__(name)
         self.unit = unit
-        self.name = name
         
     def take_reading(self, value):
         if self.is_on == True:
@@ -65,7 +65,7 @@ class Spectrometer(Instrument):
     """
 
     def __init__(self, name):
-        self.name = str(name)
+        super().__init__(name)
 
     def calibrate(self):
         super().calibrate()
