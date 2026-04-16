@@ -36,9 +36,9 @@ class Thermometer(Instrument):
     
     """
 
-    def __init__(self, name, unit):
+    def __init__(self, name, unit = 'Celcius'):
         self.unit = unit
-        unit = str(unit)
+        self.name = name
         
     def take_reading(self, value):
         if self.is_on == True:
@@ -67,6 +67,7 @@ class Spectrometer(Instrument):
     def __init__(self, name):
         self.name = str(name)
 
+    def calibrate(self):
         super().calibrate()
         print("Aligning optical diffraction grating...")
     
