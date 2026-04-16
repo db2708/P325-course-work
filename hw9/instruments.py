@@ -38,7 +38,7 @@ class Thermometer(Instrument):
 
     def __init__(self, name, unit):
         self.unit = unit
-        self.name = name
+        unit = str(unit)
         
     def take_reading(self, value):
         if self.is_on == True:

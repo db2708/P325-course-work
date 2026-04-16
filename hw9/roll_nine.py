@@ -1,4 +1,5 @@
 import numpy as np
+from math import floor
 
 def play_the_game(r, n_games):
     
@@ -22,6 +23,7 @@ def play_the_game(r, n_games):
         else:
             profit -= 1
     
-    return profit
+    avg_profit = profit / n_games
+    return floor(avg_profit)
 
-# play_the_game(10, 100)
+# play_the_game(18.5, 100_000)

@@ -46,6 +46,7 @@ def fit_data(filename, plotname):
     ax.plot(time, envelope, c='lightcoral', ls='--', label='Envelope')
     ax.plot(time, -envelope, c='lightcoral', ls='--')
    
+    ax.set_title('Damped Oscillation Fit')
     ax.set_xlabel('Time (s)')
     ax.set_ylabel('Position (cm)')
     ax.legend()
