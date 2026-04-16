@@ -24,6 +24,5 @@ def play_the_game(r, n_games):
             profit -= 1
     
     avg_profit = profit / n_games
-    return print(floor(avg_profit))
+    return floor(avg_profit)
 
-play_the_game(18.5, 100_000)
